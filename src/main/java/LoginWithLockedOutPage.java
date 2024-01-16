@@ -13,6 +13,7 @@ public class LoginWithLockedOutPage {
     protected  final By passwordField = By.id("password");
     protected  final By loginbtn = By.id("login-button");
     protected  final By error = By.xpath("//*[@id=\"login_button_container\"]/div/form/div[3]/h3");
+//    protected  final By error = By.xpath("//button[@class =\"error-button\"]");
 
     //check login functionality  with lockedout Customer
     public void loginWithLockedOutUser(String username , String password)
@@ -24,7 +25,7 @@ public class LoginWithLockedOutPage {
 
     public String  getlockedOutErrorMsg ()
     {
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
        return   driver.findElement(error).getText();
     }
 }

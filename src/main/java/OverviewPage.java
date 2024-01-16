@@ -8,11 +8,12 @@ public class OverviewPage {
         this.driver = driver;
     }
     private  final By overview = By.className("title");
-    private  final By item1 = By.xpath("//*[@id=\"item_4_title_link\"]/div");
-    private  final By item2 = By.xpath("//*[@id=\"item_0_title_link\"]/div");
-    private  final By itemPrice1 = By.xpath("//*[@id=\"checkout_summary_container\"]/div/div[1]/div[3]/div[2]/div[2]/div");
-    private  final By itemprice2 = By.xpath("//*[@id=\"checkout_summary_container\"]/div/div[1]/div[4]/div[2]/div[2]/div");
-    private  final By totalPrice = By.xpath("//*[@id=\"checkout_summary_container\"]/div/div[2]/div[8]");
+    private  final By item1 = By.xpath("//a[@id=\"item_4_title_link\"]");
+
+    private  final By item2 = By.xpath("//a[@id=\"item_0_title_link\"]");
+    private  final By itemPrice1 = By.xpath("//div[text() =\"29.99\"]");
+    private  final By itemprice2 = By.xpath("//div[text() =\"9.99\"]");
+    private  final By totalPrice = By.xpath("//div[@class =\"summary_info_label summary_total_label\"]");
     private  final By finish = By.id("finish");
 
 
